@@ -3,12 +3,19 @@ def triangle(ab, bc ,ac):
         print("il est possible de réaliser ce triangle")
     else :
         print('ce triangle est impossible a réaliser')
-    if pow(bc,2) == pow(ac,2) + pow(ab,2) or pow(ac,2) == pow(ab,2) + pow(bc,2) or pow(ab,2) == pow(ac,2) + pow(bc,2):
-        print('ce triangle est rectangle')
-    elif ab == bc or bc == ac or ac == ab:
-        print('ce triangle est isocèle')
+
+    if pow(bc,2) == pow(ac,2) + pow(ab,2) or pow(ac,2) == pow(ab,2) + pow(bc,2) or pow(ab,2) == pow(ac,2) + pow(bc,2) and ab == bc or bc == ac or ac == ab:
+          print('ce triangle est isocèle rectangle')
+
+    elif pow(bc,2) == pow(ac,2) + pow(ab,2) or pow(ac,2) == pow(ab,2) + pow(bc,2) or pow(ab,2) == pow(ac,2) + pow(bc,2):
+         print('ce triangle est rectangle')
+
     elif ab == bc and bc == ac:
         print('ce triangle est equilatéral')
+
+    elif ab == bc or bc == ac or ac == ab:
+        print('ce triangle est isocèle')
+
     else:
         print ('ce triangle est quelquonque')
 
@@ -29,4 +36,5 @@ triangle(4.8, 5.2, 2)
 
 #Triangle impossible
 triangle(-3,-5,3)
+
 
